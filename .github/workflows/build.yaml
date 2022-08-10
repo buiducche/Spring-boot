@@ -40,7 +40,7 @@ jobs:
           file: ./Dockerfile
           builder: ${{ steps.buildx.outputs.name }}
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/Spring-boot-git-action
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/spring-boot-git-action
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
 
