@@ -1,0 +1,19 @@
+version: '3'
+services:
+    spring-boot:
+        build:
+          context: .
+          dockerfile: Dockerfile
+        volumes:
+            - ./src:/src
+        ports:
+            - "8080:8080"
+    mysql: 
+        image: mysql:latest
+        ports:
+          - 3306:3306
+        environment:
+          MYSQL_ROOT_PASSWORD: "221100"
+          MYSQL_PASSWORD: "221100"
+          MYSQL_USER: "che"
+          MYSQL_DATABASE: "webchat"
